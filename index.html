@@ -1,27 +1,87 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/githubPage/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue3 + Element Plus | GitHub Pages</title>
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
-      }
-      #app {
-        width: 100%;
-        min-height: 100vh;
-      }
-    </style>
-    <script type="module" crossorigin src="/githubPage/assets/index.FsV72sRG.js"></script>
-    <link rel="stylesheet" crossorigin href="/githubPage/assets/index.nyCW2v5r.css">
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>待办事项应用说明</title>
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+    .card {
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .tag {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    .tag.local {
+      background-color: #10b981;
+      color: white;
+    }
+    .tag.github {
+      background-color: #f59e0b;
+      color: white;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>待办事项应用 - 工作模式说明</h1>
+  
+  <div class="card">
+    <h2><span class="tag local">本地开发模式</span> 完整功能</h2>
+    <p>在本地开发环境中，应用提供完整的待办事项功能：</p>
+    <ul>
+      <li>添加、删除和修改待办事项</li>
+      <li>标记待办事项为已完成或未完成</li>
+      <li>过滤显示全部、已完成或未完成的待办事项</li>
+      <li>使用浏览器的 localStorage 保存数据</li>
+    </ul>
+    <p>这使您可以在开发过程中测试所有功能。</p>
+  </div>
+  
+  <div class="card">
+    <h2><span class="tag github">GitHub Pages 模式</span> 只读展示</h2>
+    <p>在 GitHub Pages 上部署时，应用将以只读模式运行：</p>
+    <ul>
+      <li>显示预设的待办事项列表</li>
+      <li>允许查看和过滤待办事项</li>
+      <li>禁用添加、删除和修改功能</li>
+      <li>不使用 localStorage 存储数据</li>
+    </ul>
+    <p>这种模式适合作为展示用途，让访问者了解应用的界面和基本功能，而无需担心数据存储问题。</p>
+  </div>
+  
+  <a href="./index.html" class="btn">进入应用</a>
+</body>
+</html> 
